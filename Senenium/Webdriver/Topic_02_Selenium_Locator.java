@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_01_Check_Environment {
+public class Topic_02_Selenium_Locator {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 
@@ -24,21 +24,21 @@ public class Topic_01_Check_Environment {
 	}
 
 	@Test
-	public void TC_01_() {
+	public void TC_01_ValidateCurrentUrl() {
 		// Login Page Url matching
 		String loginPageUrl = driver.getCurrentUrl();
 		Assert.assertEquals(loginPageUrl, "https://www.facebook.com/");
 	}
 
 	@Test
-	public void TC_02_() {
+	public void TC_02_ValidatePageTitle() {
 		// Login Page title
 		String loginPageTitle = driver.getTitle();
 		Assert.assertEquals(loginPageTitle, "Facebook - Đăng nhập hoặc đăng ký");
 	}
 
 	@Test
-	public void TC_03_() {
+	public void TC_03_LoginFormDisplayed() {
 		// Login form displayed
 		Assert.assertTrue(driver.findElement(By.xpath("//form[@data-testid='royal_login_form']")).isDisplayed());
 	}
