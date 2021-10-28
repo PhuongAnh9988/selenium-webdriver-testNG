@@ -37,7 +37,11 @@ public class Topic_06_Web_Browser_Part_1 {
 	   driver.getCurrentUrl();
 	   
 	   // Trả về Page source code (HTML/Css/JS/,...)page hiện tại
-	   driver.getPageSource()contains()
+	   driver.getPageSource().contains("Facebook helps you connect anh share with the people in your life");
+	   // Verify tương đối
+	   // Trả về page title hiện tại
+	   driver.getTitle();
+	   System.out.println();
 	}
 
 	@Test
